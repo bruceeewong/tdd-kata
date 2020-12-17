@@ -12,16 +12,17 @@
 // 2.有单元测试，单元测试覆盖率100%
 // 3.10分钟内完成
 
-function fizzbuzz(param) {
-  if (canDivideBy(param, 15)) {
+function fizzbuzz(num) {
+  if (canDivideBy(num, 15)) {
     return 'FizzBuzz';
   }
-  if (canDivideBy(param, 3)) {
+  if (canDivideBy(num, 3)) {
     return 'Fizz';
   }
-  if (canDivideBy(param, 5)) {
+  if (canDivideBy(num, 5)) {
     return 'Buzz';
   }
+  return num.toString();
 }
 
 function canDivideBy(input, num) {

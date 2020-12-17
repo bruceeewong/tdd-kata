@@ -1,6 +1,10 @@
 const fizzbuzz = require('./fizzbuzz');
 
 describe('fizzbuzz', () => {
+  test('print raw number in string format', () => {
+    expect(fizzbuzz(1)).toEqual('1');
+    expect(fizzbuzz(19)).toEqual('19');
+  });
   test('print Fizz when num can be divided by 3', () => {
     expect(fizzbuzz(3)).toEqual('Fizz');
     expect(fizzbuzz(6)).toEqual('Fizz');
