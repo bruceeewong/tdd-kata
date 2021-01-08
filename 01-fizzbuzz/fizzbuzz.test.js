@@ -27,12 +27,14 @@ function fizzbuzz(num) {
   if (canDivideBy(num, 5)) {
     return "Buzz";
   }
-  return "1";
+  return num.toString();
 }
 
 describe("fizzbuzz", () => {
   test("测正常数字返回", () => {
     expect(fizzbuzz(1)).toEqual("1");
+    expect(fizzbuzz(2)).toEqual("2");
+    expect(fizzbuzz(98)).toEqual("98");
   });
   test("测3的倍数返回", () => {
     expect(fizzbuzz(3)).toEqual("Fizz");
