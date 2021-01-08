@@ -17,8 +17,12 @@
 // 运行 npm run test:watch 以运行测试工具
 // 运行 npm run test:cov 以生成测试覆盖率
 
+function fizzbuzz(num) {
+  return "1";
+}
+
 describe("fizzbuzz", () => {
-  test("write down your first test case", () => {
-    expect(true).toEqual(true);
+  test("测正常数字返回", () => {
+    expect(fizzbuzz(1)).toEqual("1");
   });
 });
