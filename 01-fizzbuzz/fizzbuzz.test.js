@@ -21,6 +21,9 @@ function fizzbuzz(num) {
   if (num % 3 === 0) {
     return "Fizz";
   }
+  if (num % 5 === 0) {
+    return "Buzz";
+  }
   return "1";
 }
 
@@ -31,5 +34,9 @@ describe("fizzbuzz", () => {
   test("测3的倍数返回", () => {
     expect(fizzbuzz(3)).toEqual("Fizz");
     expect(fizzbuzz(6)).toEqual("Fizz");
+  });
+  test("测5的倍数返回", () => {
+    expect(fizzbuzz(5)).toEqual("Buzz");
+    expect(fizzbuzz(10)).toEqual("Buzz");
   });
 });
