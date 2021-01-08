@@ -18,11 +18,18 @@
 // 运行 npm run test:cov 以生成测试覆盖率
 
 function fizzbuzz(num) {
+  if (num % 3 === 0) {
+    return "Fizz";
+  }
   return "1";
 }
 
 describe("fizzbuzz", () => {
   test("测正常数字返回", () => {
     expect(fizzbuzz(1)).toEqual("1");
+  });
+  test("测3的倍数返回", () => {
+    expect(fizzbuzz(3)).toEqual("Fizz");
+    expect(fizzbuzz(6)).toEqual("Fizz");
   });
 });
