@@ -16,22 +16,7 @@
 // 添加 expect() 方法以添加断言
 // 运行 npm run test:watch 以运行测试工具
 // 运行 npm run test:cov 以生成测试覆盖率
-
-function fizzbuzz(num) {
-  function canDivideBy(num, divideNum) {
-    return num % divideNum === 0;
-  }
-  if (canDivideBy(num, 15)) {
-    return "FizzBuzz";
-  }
-  if (canDivideBy(num, 3)) {
-    return "Fizz";
-  }
-  if (canDivideBy(num, 5)) {
-    return "Buzz";
-  }
-  return num.toString();
-}
+const fizzbuzz = require("./fizzbuzz");
 
 describe("fizzbuzz", () => {
   test("测正常数字返回", () => {
