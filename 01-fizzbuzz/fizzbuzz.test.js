@@ -21,6 +21,9 @@ function fizzbuzz(num) {
   function canDivideBy(num, divideNum) {
     return num % divideNum === 0;
   }
+  if (canDivideBy(num, 15)) {
+    return "FizzBuzz";
+  }
   if (canDivideBy(num, 3)) {
     return "Fizz";
   }
@@ -43,5 +46,9 @@ describe("fizzbuzz", () => {
   test("测5的倍数返回", () => {
     expect(fizzbuzz(5)).toEqual("Buzz");
     expect(fizzbuzz(10)).toEqual("Buzz");
+  });
+  test("测3和5的公倍数返回", () => {
+    expect(fizzbuzz(15)).toEqual("FizzBuzz");
+    expect(fizzbuzz(45)).toEqual("FizzBuzz");
   });
 });
