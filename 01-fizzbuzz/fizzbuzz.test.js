@@ -18,10 +18,13 @@
 // 运行 npm run test:cov 以生成测试覆盖率
 
 function fizzbuzz(num) {
-  if (num % 3 === 0) {
+  function canDivideBy(num, divideNum) {
+    return num % divideNum === 0;
+  }
+  if (canDivideBy(num, 3)) {
     return "Fizz";
   }
-  if (num % 5 === 0) {
+  if (canDivideBy(num, 5)) {
     return "Buzz";
   }
   return "1";
